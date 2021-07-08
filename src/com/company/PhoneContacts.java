@@ -1,23 +1,14 @@
 package com.company;
 
 public class PhoneContacts {
-    String Group;
+    String group;
 
     public PhoneContacts(String group) {
-        Group = group;
+        this.group = group;
     }
     public PhoneContacts() {
 
     }
-
-    public String getGroup() {
-        return Group;
-    }
-
-    public void setGroup(String group) {
-        Group = group;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -25,16 +16,16 @@ public class PhoneContacts {
 
         PhoneContacts that = (PhoneContacts) o;
 
-        return Group != null ? Group.equals(that.Group) : that.Group == null;
+        return group != null ? group.equals(that.group) : that.group == null;
     }
 
     @Override
     public int hashCode() {
-        return Group != null ? Group.hashCode() : 0;
+        return group != null ? group.hashCode() : 0;
     }
 
     @Override
     public String toString() {
-        return "\nГруппы: " + Group;
+        return "\nГруппы: " + group;
     }
 }
